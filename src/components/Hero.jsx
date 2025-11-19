@@ -1,27 +1,33 @@
 import Spline from '@splinetool/react-spline'
 import { motion } from 'framer-motion'
+import CenteredBrand from './CenteredBrand'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[92vh] overflow-hidden pt-32">
+    <section className="relative min-h-[92vh] overflow-hidden pt-24">
+      {/* 3D Scene */}
       <div className="absolute inset-0">
         <Spline scene="https://prod.spline.design/4cHQr84zOGAHOehh/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
+      {/* AI glow overlays */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(59,130,246,0.35),transparent_45%)]" />
 
+      {/* Centered brand overlay */}
       <div className="relative z-10">
         <div className="mx-auto max-w-7xl px-6">
+          <CenteredBrand />
+
           <div className="grid lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 text-center lg:text-left">
-              <motion.h1
+              <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight"
+                className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight"
               >
                 AI Automation Agency for Revenue-Driven Teams
-              </motion.h1>
+              </motion.h2>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}

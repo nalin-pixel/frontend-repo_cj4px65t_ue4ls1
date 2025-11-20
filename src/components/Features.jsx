@@ -1,4 +1,5 @@
 import { Bot, PhoneCall, Share2, Workflow, ShieldCheck, Zap } from 'lucide-react'
+import TiltCard from './TiltCard'
 
 const features = [
   {
@@ -45,7 +46,7 @@ export default function Features() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="group relative overflow-hidden rounded-2xl border border-blue-400/20 bg-blue-900/20 p-6 hover:bg-blue-900/30 transition-colors">
+            <TiltCard key={title} className="group relative overflow-hidden rounded-2xl border border-blue-400/20 bg-blue-900/20 p-6 hover:bg-blue-900/30 transition-colors">
               <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-blue-500/10 blur-2xl group-hover:bg-blue-400/10 transition-colors" />
               <div className="relative">
                 <div className="inline-flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 p-3 ring-1 ring-white/10 shadow-lg shadow-blue-900/40">
@@ -54,7 +55,7 @@ export default function Features() {
                 <h3 className="mt-4 text-white font-semibold text-lg">{title}</h3>
                 <p className="mt-2 text-blue-100/80 text-sm">{desc}</p>
               </div>
-            </div>
+            </TiltCard>
           ))}
         </div>
       </div>

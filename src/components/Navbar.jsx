@@ -10,6 +10,7 @@ export default function Navbar() {
     { label: 'Process', to: '/process' },
     { label: 'Case Studies', to: '/case-studies' },
     { label: 'About', to: '/about' },
+    { label: 'Contact', to: '/contact' },
   ]
 
   return (
@@ -33,9 +34,9 @@ export default function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <a href="#contact" className="inline-flex items-center rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2 text-white shadow-lg shadow-blue-900/40 hover:shadow-blue-800/60 transition-all">
+              <Link to="/contact" className="inline-flex items-center rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2 text-white shadow-lg shadow-blue-900/40 hover:shadow-blue-800/60 transition-all">
                 Get a Proposal
-              </a>
+              </Link>
             </nav>
 
             <button className="md:hidden text-white" onClick={() => setOpen(!open)} aria-label="Toggle menu">
@@ -51,9 +52,9 @@ export default function Navbar() {
                     {item.label}
                   </Link>
                 ))}
-                <a href="#contact" className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-3 text-white shadow-lg shadow-blue-900/40">
+                <Link to="/contact" onClick={() => setOpen(false)} className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-3 text-white shadow-lg shadow-blue-900/40">
                   Get a Proposal
-                </a>
+                </Link>
               </div>
             </div>
           )}
